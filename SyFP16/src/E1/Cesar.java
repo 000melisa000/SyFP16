@@ -15,7 +15,7 @@ public class Cesar
     {
         String resultado = "";
         for(int i=0; i<=mensaje.length(); i=i +1)
-        {
+       {
             resultado = resultado + (char)(mensaje.charAt(i)+ constante);
             
                
