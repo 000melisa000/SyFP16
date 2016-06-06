@@ -96,7 +96,7 @@ public class InterfazCifrado extends javax.swing.JFrame {
 
         ta.setColumns(20);
         ta.setRows(5);
-        ta.setText("melisa\ngutierrez\nreyes\n");
+        ta.setText("\n");
         jScrollPane1.setViewportView(ta);
 
         tc.setColumns(20);
@@ -175,14 +175,13 @@ public class InterfazCifrado extends javax.swing.JFrame {
                                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(10, 10, 10)
                                 .addComponent(jLabel2)))))
-                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(descifrar)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(borrar2)))
-                .addContainerGap(43, Short.MAX_VALUE))
+                .addContainerGap(61, Short.MAX_VALUE))
         );
 
         pack();
