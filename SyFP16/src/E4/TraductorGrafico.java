@@ -5,9 +5,11 @@
  */
 package E4;
 
+import E5.Traductor;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+import java.util.ArrayList;
 
 /**
  *
@@ -15,13 +17,23 @@ import java.awt.event.KeyListener;
  */
 public class TraductorGrafico extends javax.swing.JFrame {
 
-    /**
-     * Creates new form TraductorGrafico
-     */
+    private Traductor d;
+    
+    
     public TraductorGrafico() {
+        
         initComponents();
+        d = new Traductor();
+        d.agregar("hola", "hello");
+        d.agregar("como", "how");
+        d.agregar("estas", "are you");
+        d.agregar("mi amigo", "my friend");
+        
         textoatraducir.addKeyListener(new KeyAdapter() {
-        String palabra = "";   
+        String palabra = ""; 
+        String traduccion ="";
+       
+        
             
             @Override
             public void keyTyped(KeyEvent e) {
@@ -29,18 +41,18 @@ public class TraductorGrafico extends javax.swing.JFrame {
                 {
                     palabra = palabra +e.getKeyChar();
                 }
-                else{
-                    textotraducido.setText(palabra);
-                    palabra = "";
-                    
-             
-                }
-                
                 
                 if(e.getKeyChar()== 8)
                 {
                     palabra = palabra.substring(0,palabra.length()-1);
                 }
+                if(e.getKeyChar() ==10 || e.getKeyChar()== ' ')
+                {
+                    traduccion = traduccion +" " +d.traducir(palabra);
+                    palabra = "";
+                    
+                }
+                textotraducido.setText(traduccion);
                 
             }
         });
