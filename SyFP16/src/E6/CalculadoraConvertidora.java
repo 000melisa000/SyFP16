@@ -19,6 +19,8 @@ public class CalculadoraConvertidora extends javax.swing.JFrame {
      */
     public CalculadoraConvertidora() {
         initComponents();
+        
+        cb1.removeAllItems();
         cb1.addItem("centrimetros");
         cb1.addItem("metros");
         cb1.addItem("kilometros");
@@ -27,6 +29,7 @@ public class CalculadoraConvertidora extends javax.swing.JFrame {
         cb1.addItem("yardas");
         cb1.addItem("millas");
         
+        cb2.removeAllItems();
         cb2.addItem("centimetros");
         cb2.addItem("metros");
         cb2.addItem("kilometros");
@@ -35,13 +38,25 @@ public class CalculadoraConvertidora extends javax.swing.JFrame {
         cb2.addItem("yardas");
         cb2.addItem("millas");
         
+        
         b1.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) 
             {
+                cb1.getSelectedItem();
                 String Texto1 = (String) cb1.getSelectedItem();
-                String texto2 = (String) cb2.getSelectedItem();
+                String Texto2 = (String) cb2.getSelectedItem();
                 Double d = new Double (tf1.getText());
+                double valor = d.doubleValue();
+                Convertidor in = new Convertidor();
+                double s =in.convertir(Texto1, valor, Texto2);
+                
+                Double t = new Double(s);
+                tf2.setText(t.toString());
+                
+                
+                      
+                
             }
         });
         

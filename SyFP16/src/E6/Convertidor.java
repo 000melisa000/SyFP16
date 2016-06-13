@@ -7,6 +7,7 @@ package E6;
 
 import java.util.HashMap;
 import java.util.Map;
+import javax.swing.JComboBox;
 
 /**
  *
@@ -45,6 +46,10 @@ public class Convertidor
         double r = c.convertir("centrimetros", 30.00, "pies");
         System.out.println(r);
         
+    }
+
+    Convertidor(JComboBox<String> cb1, double valor, JComboBox<String> cb2) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
             
 }
