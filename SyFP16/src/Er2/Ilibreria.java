@@ -3,19 +3,18 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Er1;
+package Er2;
 
 /**
  *
  * @author dilan
  */
-public class C4 extends Aclase 
+public interface Ilibreria 
 {
-    
-    public C4(String descripcion) 
-    {
-        super(descripcion);
-    }
+    public void print();
+    void abrirArchivos();
+    void cerrarArchivos();
+    void desplegarArchivos();
     
     
 }

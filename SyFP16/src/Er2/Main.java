@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Er1;
+package Er2;
 
 /**
  *
@@ -12,9 +12,13 @@ package Er1;
 public class Main {
     public static void main (String[]args)
     {
-         Iclase a = new C1("edad"); 
-         Aclase b = new C2("si");
-         C2 c = new C2("aja");
+        ArchivoTexto a = new ArchivoTexto ();
+        ArchivoBinario b = new ArchivoBinario();
+        ArchivoImagen c = new ArchivoImagen();
+        a.ArchivoTexto();
+        b.ArchivoBinario();
+        c.ArchivoImagen();
     }
+    
     
 }

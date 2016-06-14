@@ -10,6 +10,6 @@ package Er1;
  * @author dilan
  */
 public interface Iclase  {
-    
+    public void print();
     
 }

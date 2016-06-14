@@ -9,8 +9,13 @@ package Er1;
  *
  * @author dilan
  */
-public class C1 extends Aclase implements Iclase 
+public class C1 extends Aclase 
 {
+    
+    public C1(String descripcion) 
+    {
+        super(descripcion);
+    }
     
     
 }

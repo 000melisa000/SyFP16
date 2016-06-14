@@ -3,18 +3,18 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Er1;
+package Er2;
 
 /**
  *
  * @author dilan
  */
-public class C4 extends Aclase 
+public class ArchivoBinario extends LibreriaArchivos 
 {
-    
-    public C4(String descripcion) 
+
+    public ArchivoBinario() 
     {
-        super(descripcion);
+        
     }
     
     

@@ -3,19 +3,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Er1;
+package E7;
+
+import java.util.List;
 
 /**
  *
  * @author dilan
  */
-public class C4 extends Aclase 
+public interface Isort 
 {
-    
-    public C4(String descripcion) 
-    {
-        super(descripcion);
-    }
-    
-    
+    public int [] ordenar(int array[]);
+    public List<Integer> ordenar( List<Integer>array);
 }
