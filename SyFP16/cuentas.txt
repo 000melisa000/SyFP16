@@ -1,0 +1,6 @@
+
+juan perez,1,100
+carlos,2,200
+jorge,3,300
+jose,4,400
+ja,5,500

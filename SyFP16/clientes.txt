@@ -1,0 +1,21 @@
+
+1,0, perez,juan
+2,0, perez,carlos
+3,0, perez,jorge
+4,0, perez,jose
+8,0, perez,ja
+1,0, perez,juan
+2,0, perez,carlos
+3,0, perez,jorge
+4,0, perez,jose
+8,0, perez,ja
+1,0, perez,juan
+2,0, ramirez,carlos
+3,0, jimenez,jorge
+4,0, reyes,jose
+8,0, lopez,ja
+1,0, perez,juan
+2,0, ramirez,carlos
+3,0, jimenez,jorge
+4,0, reyes,jose
+8,0, lopez,ja

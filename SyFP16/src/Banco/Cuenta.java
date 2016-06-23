@@ -16,13 +16,36 @@ import java.util.logging.Logger;
  */
 public class Cuenta 
 {
+    public int numcuenta;
+    public String cliente;
+    public int saldo;
+
+    public int getNumcuenta() {
+        return numcuenta;
+    }
+
+    public String getCliente() {
+        return cliente;
+    }
+
+    public int getSaldo() {
+        return saldo;
+    }
+
+    public Cuenta(int numcuenta, String cliente, int saldo) {
+        this.numcuenta = numcuenta;
+        this.cliente = cliente;
+        this.saldo = saldo;
+    }
+    
+    
 
     public Cuenta() {
-        this.saldo = 0.0;
+        this.saldos = 0.0;
     }
     private double checksaldo()
-    {return saldo;}
-    private double saldo;
+    {return saldos;}
+    private double saldos;
 
     public void deposito(double money)throws WrongAmountException
     {
@@ -32,7 +55,7 @@ public class Cuenta
         }
         else
         {
-            saldo = saldo + money;
+            saldos = saldos + money;
         }
     }
     public void retiro(double dollar)throws SaldoInsuficienteException
@@ -43,7 +66,7 @@ public class Cuenta
         }
         else
         {
-            saldo = saldo - dollar;
+            saldos = saldos - dollar;
         }
         
     }
