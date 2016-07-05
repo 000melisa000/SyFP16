@@ -20,25 +20,63 @@ import javax.swing.table.AbstractTableModel;
  */
 public class TblAbstract extends AbstractTableModel
 {
+    String nombredelarchivo;
     String m [][]; //matriz
-
-    public TblAbstract(String s) throws IOException 
+    int i =0;
+   
+    public int contarRenglones ()
     {
         int i = 0;
-        m = new String[101][6];
+        {
+            BufferedReader br = null;
+            String linea;
+            linea = readline();
+            while(linea != null)
+            {
+                i=1+1;
+                try {
+                    linea = br.readLine();
+                } catch (IOException ex) {
+                    Logger.getLogger(TblAbstract.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
+        } return i;
+    }
+    public int contarColumnas()
+    {
+        String linea;
+        linea = readline();
+        String cols [];
+        cols = linea.split(",");
+        i = cols.length;
+        return i;
+    }
+
+    public TblAbstract(String s)
+    {
+        int i = 0;
+        m = new String[contarRenglones()][contarColumnas()];
         String row[];//variable arreglo[]
         BufferedReader br = null;
             try 
             {
                 br = new BufferedReader(new FileReader(s));
-                String linea;
+                String linea = null;
+            try {
                 linea = br.readLine();
+            } catch (IOException ex) {
+               
+            }
                 while(linea != null)
                 {
                     row = linea.split(",");
                     m [i] = row;
                     i=i+1;
-                    linea = br.readLine();
+                    try {
+                        linea = br.readLine();
+                    } catch (IOException ex) {
+                        
+                    }
                 }
             } 
             catch (FileNotFoundException ex) 
@@ -50,18 +88,22 @@ public class TblAbstract extends AbstractTableModel
     @Override
     public int getRowCount() 
     {
-        return 100;
+        return contarRenglones();
     }
 
     @Override
     public int getColumnCount() 
     {
-        return 100;
+        return contarColumnas();
     }
 
     @Override
     public Object getValueAt(int rowIndex, int columnIndex) 
     {
         return m [rowIndex][columnIndex];
+    }
+
+    private String readline() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }
